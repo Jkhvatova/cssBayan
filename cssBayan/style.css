@@ -1,3 +1,50 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #EDEBE3;
+  color: #505980;
+  font-size: 10px;
+}
+.container {
+  max-width: 1920px;
+  width: 1920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bayan-container {
+  cursor: pointer;
+}
+.bayan-container input {
+  display: none;
+}
+
+.bayan-container label {
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+.bayan-container label:hover {
+  font-size: 1.6rem;
+  background-color: #B8B8B8;
+
+}
+
+.bayan-container input:checked + label {
+  color: #B0C6D7;
+}
+.bayan-inner {
+   display: none;
+}
+.bayan-container input:checked ~ .bayan-inner {
+  display: block;
+}
+
+.bayan-inner {
+  padding-top: 20px;
 }
