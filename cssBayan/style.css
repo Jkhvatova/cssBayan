@@ -1,6 +1,6 @@
 * {
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
 	border: none;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
@@ -9,7 +9,6 @@
 body {
   min-height: 100vh;
   color: #969BB3;
-  font-size: 10px;
   background-color: #EDEBE3;
 }
 .container {
@@ -21,7 +20,8 @@ body {
 }
 h1 {
   font-size: 2.6rem;
-  padding-top: 40px;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
   color: #505980;
 }
 
@@ -29,11 +29,14 @@ h2 {
   font-size: 1.8rem;
   font-weight: 100;
 }
+
 .fa-solid.fa-plus {
   opacity: 0;
   font-size: 2.6rem;
   transition: opacity 0.1s ease;
 }
+
+
 .bayan-container {
   cursor: pointer;
   pointer-events: auto;
@@ -41,7 +44,7 @@ h2 {
   width: 40%;
   display: flex;
   flex-direction: column;
-  align-items:center
+  align-items:center;
 }
 .bayan-container:hover {
   color: #505980;
@@ -56,7 +59,7 @@ h2 {
 .bayan-container label {
   text-align: left;
   padding: 2rem;
-  transition: all 1s;
+  transition: all 0.7s;
 
 }
 
@@ -73,8 +76,8 @@ h2 {
 .bayan-container input:checked ~ .bayan-label .bayan-inner {
   overflow: auto;
   max-height: 100rem;
-  padding-top: 20px;
-  transition: all 1s ease-in-out;
+  padding-top: 2rem;
+  transition: all 0.7s ease-in-out;
 }
 
 .bayan-container input:checked ~ .bayan-label .bayan-inner img {
@@ -98,17 +101,18 @@ h2 {
 .bayan-container label:hover .bayan-inner {
   overflow: auto;
   max-height: 50rem;
-  padding-top: 20px;
-  transition: all 1s ease-in-out;
+  padding-top: 2rem;
+  transition: all 0.7s ease-in-out;
 }
 
 .bayan-inner img {
+  width: 100%;
   transform: scale(0.8, 0.8);
   transform-origin: center center;
   transition: all 1s ease-in-out;
 }
 .bayan-container label:hover .bayan-inner img {
-  transition: all 1s ease-in-out;
+  transition: all 0.7s ease-in-out;
   transform: scale(1, 1);
 }
 .single-bayan {
@@ -126,4 +130,64 @@ h2 {
   justify-content: space-between;
   margin: 0;
   padding: 0;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+.contacts {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.contacts a {
+  text-decoration: none;
+  color: #969BB3;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 320px)  {
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .fa-solid.fa-plus {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 640px)  {
+  .bayan-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 819px)  {
+  h1 {
+    font-size: 2.0rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  .fa-solid.fa-plus {
+    font-size: 2.0rem;
+  }
+  .bayan-container {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1919px)  {
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  .fa-solid.fa-plus {
+    font-size: 2.2rem;
+  }
 }
