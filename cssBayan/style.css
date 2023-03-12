@@ -8,7 +8,7 @@
 
 body {
   min-height: 100vh;
-  color: #505980;
+  color: #969BB3;
   font-size: 10px;
   background-color: #EDEBE3;
 }
@@ -22,6 +22,7 @@ body {
 h1 {
   font-size: 2.6rem;
   padding-top: 40px;
+  color: #505980;
 }
 
 h2 {
@@ -35,12 +36,16 @@ h2 {
 }
 .bayan-container {
   cursor: pointer;
+  pointer-events: auto;
+  z-index: 2;
   width: 40%;
   display: flex;
   flex-direction: column;
   align-items:center
 }
-
+.bayan-container:hover {
+  color: #505980;
+}
 .bayan-container:hover .fa-solid.fa-plus {
   opacity: 1;
 }
@@ -58,16 +63,22 @@ h2 {
 .bayan-container input:checked + label {
   color: #30354D;
 }
+
 .bayan-inner {
    overflow: hidden;
    max-height: 0rem;
-   transition: all 1s;
+   transition: all 0.3s ease-in-out;
 
 }
 .bayan-container input:checked ~ .bayan-label .bayan-inner {
   overflow: auto;
-  transition: all 1s;
   max-height: 100rem;
+  padding-top: 20px;
+  transition: all 1s ease-in-out;
+}
+
+.bayan-container input:checked ~ .bayan-label .bayan-inner img {
+  transform: scale(1, 1);
 }
 
 .bayan-container input:checked ~ .bayan-label .fa-solid.fa-plus{
@@ -75,17 +86,30 @@ h2 {
   transition: all 0.3s ease;
 }
 
-.bayan-container label:hover {
+.single-bayan label:hover {
   background-color: #F8F7F4;
   box-shadow: 0 0.3rem 1rem -0.2rem #666b83;
 }
-.bayan-container label:hover ~ .bayan-label {
-  overflow: auto;
-  transition: all 1s;
-  max-height: 100rem;
+.bayan-container label:hover .fa-solid.fa-plus{
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
 }
-.bayan-inner {
+
+.bayan-container label:hover .bayan-inner {
+  overflow: auto;
+  max-height: 50rem;
   padding-top: 20px;
+  transition: all 1s ease-in-out;
+}
+
+.bayan-inner img {
+  transform: scale(0.8, 0.8);
+  transform-origin: center center;
+  transition: all 1s ease-in-out;
+}
+.bayan-container label:hover .bayan-inner img {
+  transition: all 1s ease-in-out;
+  transform: scale(1, 1);
 }
 .single-bayan {
   display: flex;
@@ -95,6 +119,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0;
 }
 .bayan-title {
   display: flex;
