@@ -26,13 +26,13 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 100;
 }
 
 .fa-solid.fa-plus {
   opacity: 0;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   transition: opacity 0.1s ease;
 }
 
@@ -147,7 +147,7 @@ footer {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 320px)  {
+/* @media screen and (min-width: 320px)  {
   h1 {
     font-size: 1.6rem;
   }
@@ -157,11 +157,22 @@ footer {
   .fa-solid.fa-plus {
     font-size: 1.6rem;
   }
+} */
+@media screen and (max-width: 1919px)  {
+  h1 {
+    font-size: 2.4rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  .fa-solid.fa-plus {
+    font-size: 2.4rem;
+  }
 }
 
-@media screen and (max-width: 640px)  {
+@media screen and (max-width: 1140px)  {
   .bayan-container {
-    width: 90%;
+    width: 60%;
   }
 }
 
@@ -176,18 +187,11 @@ footer {
     font-size: 2.0rem;
   }
   .bayan-container {
-    width: 60%;
+    width: 70%;
   }
 }
-
-@media screen and (max-width: 1919px)  {
-  h1 {
-    font-size: 2.2rem;
-  }
-  h2 {
-    font-size: 1.6rem;
-  }
-  .fa-solid.fa-plus {
-    font-size: 2.2rem;
+@media screen and (max-width: 640px)  {
+  .bayan-container {
+    width: 90%;
   }
 }
