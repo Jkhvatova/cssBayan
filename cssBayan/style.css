@@ -31,7 +31,7 @@ h2 {
 }
 
 .fa-solid.fa-plus {
-  opacity: 0;
+  opacity: 1;
   font-size: 2.4rem;
   transition: opacity 0.1s ease;
 }
@@ -81,32 +81,6 @@ h2 {
   transform: rotate(45deg);
   transition: all 0.3s ease;
 }
-@media (hover:hover) {
-  .bayan-container:hover {
-    color: #505980;
-  }
-  .bayan-container:hover .fa-solid.fa-plus {
-    opacity: 1;
-  }
-  .single-bayan label:hover {
-    background-color: #F8F7F4;
-    box-shadow: 0 0.3rem 1rem -0.2rem #666b83;
-  }
-  .bayan-container label:hover .fa-solid.fa-plus{
-    transform: rotate(45deg);
-    transition: all 0.3s ease;
-  }
-  .bayan-container label:hover .bayan-inner {
-    overflow: auto;
-    max-height: 50rem;
-    padding-top: 2rem;
-    transition: all 0.7s ease-in-out;
-  }
-  .bayan-container label:hover .bayan-inner img {
-    transition: all 0.7s ease-in-out;
-    transform: scale(1, 1);
-  }
-}
 
 .bayan-inner img {
   width: 100%;
@@ -132,6 +106,39 @@ h2 {
   justify-content: space-between;
   margin: 0;
   padding: 0;
+}
+@media (hover:hover) {
+  .fa-solid.fa-plus {
+    opacity: 0;
+  }
+
+  .bayan-container:hover {
+    color: #505980;
+  }
+  .bayan-container:hover .fa-solid.fa-plus {
+    opacity: 1;
+  }
+  .single-bayan label:hover {
+    background-color: #F8F7F4;
+    box-shadow: 0 0.3rem 1rem -0.2rem #666b83;
+  }
+  .bayan-container label:hover .fa-solid.fa-plus{
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+  }
+  .bayan-container label:hover .bayan-inner {
+    overflow: auto;
+    max-height: 50rem;
+    padding-top: 2rem;
+    transition: all 0.7s ease-in-out;
+  }
+  .bayan-container label:hover .bayan-inner img {
+    transition: all 0.7s ease-in-out;
+    transform: scale(1, 1);
+  }
+  .bayan-label {
+  cursor: pointer;
+  }
 }
 
 footer {
